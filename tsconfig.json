@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": [
+      "es6",
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "ESNEXT",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2017",
+    "incremental": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.js",
+    "next.config.js",
+    "pages/rickMorty/index.js"
+, "tests/sum.test.js", "components/homePage/slider/ImageSlider.js", "components/pokemon/pokemonLoad/PokemonCentext.js", "components/pokemon/pokemonLoad/PokemonThumb.js", "components/pokemon/pokemonSearch/PokemonData.js", "components/pokemon/pokemonSearch/PokemonList.js", "components/pokemon/pokemonSearch/SearchPokemon.styled.js", "components/pokemon/pokemonSearch/SearchPokemon.js", "components/pokemon/PokemonPage.styled.js", "components/pokemon/PokemonPage.js", "components/rickAndMorty/character/CharacterPage.styled.js", "components/pokemon/pokemonLoad/Pokemon.styled.js", "components/pokemon/pokemonSearch/getPokemon.js", "components/rickAndMorty/ClintSideFetch.styled.js", "components/rickAndMorty/ClintSideFetching.js", "components/rickAndMorty/RickAndMorty.styled.js", "components/rickAndMorty/RickAndMortyPage.js", "components/shared/cards/Cards.js", "components/shared/cards/Cards.styled.js", "components/todo/todo/Todo.js", "components/todo/todo/Todo.styled.js", "components/todo/todoForm/TodoForm.js", "components/todo/todoForm/TodoForm.styled.js", "components/todo/todoList/TodoList.styled.js", "components/todo/todoList/TodoList.js", "components/todo/TodosPage.js", "config/globalStyles.js", "helpers/constants.js", "helpers/Methods.js", "pages/_app.js", "components/homePage/slider/ImageSlider.styled.js", "components/homePage/slider/SliderData.js", "components/homePage/HomePage.js", "pages/rickMorty/[id].js", "pages/404.js", "pages/500.js", "pages/index.js", "pages/pokemon.js", "pages/todo.js", "pages/_document.js", "constants/media.js"  ]
+}

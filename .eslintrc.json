@@ -1,0 +1,98 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:prettier/recommended",
+        "plugin:styled-components-a11y/recommended",
+        "plugin:react/recommended",
+        "plugin:@next/next/recommended",
+        "prettier"
+    ],
+    "plugins": [
+        "react",
+        "react-hooks",
+        "better-styled-components",
+        "styled-components-a11y",
+        "sort-imports-es6-autofix",
+        "sort-keys-fix",
+        "absolute-import",
+        "import",
+        "prettier"
+    ],
+    // "overrides": [
+    //     {
+    //         "files": ["pages/**/*.{ts,tsx}"]
+    //     }
+    // ],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 8
+    },
+    "rules": {
+        "better-styled-components/sort-declarations-alphabetically": 2,
+        "styled-components-a11y/anchor-is-valid": "off",
+        "styled-components-a11y/control-has-associated-label": [
+            2,
+            {
+                "labelAttributes": ["label"],
+                "controlComponents": ["CustomComponent"],
+                // "ignoreElements": [
+                //     "audio",
+                //     "canvas",
+                //     "embed",
+                //     "input",
+                //     "textarea",
+                //     "tr",
+                //     "video"
+                // ],
+                // "ignoreRoles": [
+                //     "grid",
+                //     "listbox",
+                //     "menu",
+                //     "menubar",
+                //     "radiogroup",
+                //     "row",
+                //     "tablist",
+                //     "toolbar",
+                //     "tree",
+                //     "treegrid"
+                // ],
+                "depth": 3
+            }
+        ],
+        "react/prop-types": "off",
+        "no-console": "warn",
+        "no-unused-vars": "off",
+        "react/react-in-jsx-scope": "off",
+        "indent": "off",
+        "sort-imports-es6-autofix/sort-imports-es6": [
+            2,
+            {
+                "ignoreCase": false,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
+        "sort-keys-fix/sort-keys-fix": "error",
+        "no-multi-spaces": "off",
+        "absolute-import/no-relative-path": "error",
+        "prettier/prettier": ["error"]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": ["js","jsx",".ts", ".tsx"]
+            }
+        },
+        "react": {
+            "version": "16.8.6"
+        }
+    }
+}

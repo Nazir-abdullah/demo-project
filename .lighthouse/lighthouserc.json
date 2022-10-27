@@ -1,0 +1,38 @@
+{
+    "ci": {
+        "upload": {
+            "target": "filesystem",
+            "outputDir": "./lhci"
+        },
+        "collect": {
+            "startServerCommand": "yarn start",
+            "url": ["http://localhost:3000/"],
+            "headful": "false",
+            "numberOfRuns": 3,
+            "settings": {
+                "throttling": {
+                    "cpuSlowdownMultiplier": 2.0
+                },
+                "skipAudits": [
+                    "redirects-http",
+                    "is-on-https",
+                    "screenshot-thumbnails",
+                    "final-screenshot"
+                ],
+                "chromeFlags": "--headless --no-sandbox"
+            }
+        },
+        "assert": {
+            "preset": "lighthouse:recommended",
+            "assertions": {
+                "is-on-https": "off",
+                "color-contrast": "off",
+                "unused-javascript": "off",
+                "unsized-images": "off",
+                "csp-xss": "off",
+                "legacy-javascript": "off",
+                "no-vulnerable-libraries": ["warn", { "minScore": 0.9 }]
+            }
+        }
+    }
+}

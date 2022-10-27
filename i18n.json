@@ -1,0 +1,8 @@
+{
+  "defaultLocale": "nl-NL",
+  "localeDetection": false,
+  "locales": ["en-US", "nl-NL"],
+  "pages": {
+    "*": ["common"]
+  }
+}
