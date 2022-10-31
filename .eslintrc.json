@@ -20,15 +20,9 @@
         "styled-components-a11y",
         "sort-imports-es6-autofix",
         "sort-keys-fix",
-        "absolute-import",
         "import",
         "prettier"
     ],
-    // "overrides": [
-    //     {
-    //         "files": ["pages/**/*.{ts,tsx}"]
-    //     }
-    // ],
     "parserOptions": {
         "sourceType": "module",
         "ecmaVersion": 8
@@ -61,7 +55,6 @@
         "react-hooks/exhaustive-deps": "error",
         "sort-keys-fix/sort-keys-fix": "error",
         "no-multi-spaces": "off",
-        "absolute-import/no-relative-path": "error",
         "prettier/prettier": ["error"]
     },
     "settings": {

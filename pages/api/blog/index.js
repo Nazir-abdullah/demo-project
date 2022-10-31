@@ -1,3 +1,3 @@
-export default function handler(req,res){
-    res.json({ message: "Blog world"});
+export default function handler(req, res) {
+    res.json({ message: "Blog world" });
 }

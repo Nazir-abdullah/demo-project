@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import { ButtonDark } from "../../components/shared/buttons/Buttons";
 import { ContentWrapper } from "../../components/shared/elements/Elements";
 import { PeopleSection } from "./People.styled";
+import React, { useState } from "react";
 
 function PeoplePage() {
     const [peopleData, setPeopleData] = useState([]);
@@ -14,7 +14,7 @@ function PeoplePage() {
         <>
             <PeopleSection>
                 <ContentWrapper>
-                    <h1>Find people's data</h1>
+                    <h1>Find people data</h1>
                 </ContentWrapper>
                 <ContentWrapper>
                     <ButtonDark onClick={fetchPeople}>Load Data</ButtonDark>
