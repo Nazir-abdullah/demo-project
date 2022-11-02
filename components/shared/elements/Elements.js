@@ -15,21 +15,3 @@ export const ContentWrapper = styled.div`
         max-width: 1200px;
     }
 `;
-
-export const Arrow = styled.div`
-    color: var(--color-primary);
-    cursor: pointer;
-    font-size: 48px;
-    position: absolute;
-    top: 110%;
-    user-select: none;
-
-    ${media.mdUp} {
-        top: 70%;
-
-        :hover {
-            transform: scale(1.1);
-            transition: all 0.2s ease-in-out;
-        }
-    }
-`;

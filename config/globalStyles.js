@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
         /* ------- skew -------- */
         --skew-default: scale(1.07, 1.05) skewX(-30deg);
-        --skew-default-opposite: scale(1.07, 1.05) skewX(+15deg);
+        --skew-default-opposite: scale(1.07, 1.05) skewX(+30deg);
 
         /* ------- shadow ------- */
         --shadow-default: rgba(5, 5, 5, 0.16) 0 10px 36px 0, rgba(6, 6, 6, 0.06) 0 0 0 1px;

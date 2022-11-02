@@ -1,19 +1,18 @@
-import {
-    MdOutlineArrowBackIos,
-    MdOutlineArrowForwardIos
-} from "react-icons/md";
+import { BsDot } from "react-icons/bs";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Image from "next/image";
 import React, { useState } from "react";
 
-import { Arrow, ContentWrapper } from "components/shared/elements/Elements";
+import { ContentWrapper } from "components/shared/elements/Elements";
 
 import {
-    Slide,
-    SlideActive,
+    Arrow,
+    Dot,
+    DotsWrapper,
+    ImagesWrapper,
     Slider,
     SliderSection,
-    SliderTitle,
-    SliderTitleWrapper
+    SliderTitle
 } from "./ImageSlider.styled";
 import { SliderData } from "./SliderData";
 
@@ -30,46 +29,49 @@ const ImageSlider = ({ slides }) => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     };
 
-    if (!Array.isArray(slides) || slides.length <= 0) {
-        return null;
-    }
-
     return (
         <SliderSection>
             <ContentWrapper>
+                <SliderTitle>
+                    <h2>Slide your Pic</h2>
+                </SliderTitle>
+            </ContentWrapper>
+            <ContentWrapper>
                 <Slider>
-                    <SliderTitleWrapper>
-                        <SliderTitle>Slide your Pic</SliderTitle>
-                    </SliderTitleWrapper>
                     <Arrow>
-                        <MdOutlineArrowBackIos onClick={prevSlide} />
+                        <MdKeyboardArrowLeft onClick={prevSlide} />
                     </Arrow>
-                    <Arrow>
-                        <MdOutlineArrowForwardIos onClick={nextSlide} />
-                    </Arrow>
-                    {SliderData.map((slide, index) => {
-                        return (
-                            <div key={index}>
-                                {index === current ? (
-                                    <SlideActive />
-                                ) : (
-                                    <Slide />
-                                )}
-                                {/* key={index} */}
-                                {index === current && (
-                                    <div>
+                    <ImagesWrapper>
+                        {SliderData.map((slide, index) => {
+                            return (
+                                <div key={index}>
+                                    {index === current && (
                                         <Image
                                             src={slide.image}
                                             alt="travel image"
-                                            width={400}
-                                            height={200}
+                                            width={800}
+                                            height={400}
                                         />
-                                    </div>
-                                )}
-                            </div>
-                        );
-                    })}
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </ImagesWrapper>
+                    <Arrow>
+                        <MdKeyboardArrowRight onClick={nextSlide} />
+                    </Arrow>
                 </Slider>
+            </ContentWrapper>
+            <ContentWrapper>
+                <DotsWrapper>
+                    {SliderData.map((slide, index) => (
+                        <span key={index}>
+                            <Dot active={index === current}>
+                                <BsDot />
+                            </Dot>
+                        </span>
+                    ))}
+                </DotsWrapper>
             </ContentWrapper>
         </SliderSection>
     );
